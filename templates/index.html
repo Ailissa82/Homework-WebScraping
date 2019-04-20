@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello, Mars!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Visit Mars...</h1>
+      <p>News. Featured Images. Weather. Facts. Hemispheres.  No Martians.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    <h2>The featured image from Mars:</h2>
+    <img src= {{ mars_data.featImg }}  alt="Mars Featured Image" >
+    <h2>The latest news on Mars:</h2>
+    <h3>{{ mars_data.newsTitle }}</h3>
+    <h3>{{ mars_data.newPara }}</h3>
+    <h2>The latest weather from Mars is:</h2>
+    <h3>{{ mars_data.marsWeather }}</h3>
+    <h2>Facts about Mars:</h2>
+    <h3>{{ mars_data.marsHtml|safe }}</h3>
+    <h2>Photos of the hemispheres of Mars:</h2>
+    <h3>{{ mars_data.hemisphere1_title[0].title }}</h3>
+    <img src= {{ mars_data.hemisphere1_title[0].url_img }}  alt="Hemisphere 1" >
+    <h3>{{ mars_data.hemisphere1_title[1].title }}</h3>
+    <img src= {{ mars_data.hemisphere1_title[1].url_img }}  alt="Hemisphere 2" >
+    <h3>{{ mars_data.hemisphere1_title[2].title }}</h3>
+    <img src= {{ mars_data.hemisphere1_title[2].url_img }}  alt="Hemisphere 3" >
+    <h3>{{ mars_data.hemisphere1_title[3].title }}</h3>
+    <img src= {{ mars_data.hemisphere1_title[3].url_img }}  alt="Hemisphere 4" >
+  </div>
+  
+  </div>
+</body>
+
+</html>
